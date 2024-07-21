@@ -12,7 +12,7 @@ vim.api.nvim_set_keymap('n', '<A-l>', ':wincmd l<CR>', { noremap = true, silent 
 
 vim.api.nvim_set_keymap('n', 'j', 'gj', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', 'k', 'gk', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<A-v>', ':lua require("rest-nvim").run()<CR>', { noremap = true, silent = true })
+--vim.api.nvim_set_keymap('n', '<A-v>', ':lua require("rest-nvim").run()<CR>', { noremap = true, silent = true })
 
 vim.api.nvim_set_keymap('n', '<A-m>', '7j', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<A-a>', '7k', { noremap = true, silent = true })

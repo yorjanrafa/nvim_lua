@@ -17,9 +17,9 @@ return {
                 vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
                 vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
                 vim.keymap.set("n", "gi", vim.lsp.buf.implementation, opts)
-                vim.keymap.set("n", "<C-k>", vim.lsp.buf.signature_help, opts)
-                vim.keymap.set("n", "<space>Wa", vim.lsp.buf.add_workspace_folder, opts)
-                vim.keymap.set("n", "<space>Wr", vim.lsp.buf.remove_workspace_folder, opts)
+                --vim.keymap.set("n", "<C-k>", vim.lsp.buf.signature_help, opts)
+                --vim.keymap.set("n", "<space>Wa", vim.lsp.buf.add_workspace_folder, opts)
+                --vim.keymap.set("n", "<space>Wr", vim.lsp.buf.remove_workspace_folder, opts)
 
 
                 vim.keymap.set("n", "K", vim.lsp.buf.hover,
@@ -41,16 +41,47 @@ return {
                 on_attach = on_attach,
                 capabilities = capabilities,
             })
-            require("lspconfig").cssls.setup({})
-            require("lspconfig").css_variables.setup({})
-            require("lspconfig").diagnosticls.setup({})
-            require("lspconfig").emmet_language_server.setup({})
-            require("lspconfig").emmet_ls.setup({})
-            require("lspconfig").html.setup({})
-            require("lspconfig").jinja_lsp.setup({})
-            require("lspconfig").tailwindcss.setup({})
-            require("lspconfig").vimls.setup({})
-            require("lspconfig").tsserver.setup({})
+            require("lspconfig").cssls.setup({
+                on_attach = on_attach,
+                capabilities = capabilities,
+            })
+            require("lspconfig").css_variables.setup({
+                on_attach = on_attach,
+                capabilities = capabilities,
+            })
+            require("lspconfig").diagnosticls.setup({
+                on_attach = on_attach,
+                capabilities = capabilities,
+            })
+            require("lspconfig").emmet_language_server.setup({
+                on_attach = on_attach,
+                capabilities = capabilities,
+            })
+            require("lspconfig").emmet_ls.setup({
+                on_attach = on_attach,
+                capabilities = capabilities,
+            })
+            local capabilities = vim.lsp.protocol.make_client_capabilities()
+            capabilities.textDocument.completion.completionItem.snippetSupport = true
+            require "lspconfig".html.setup {
+                capabilities = capabilities,
+            }
+            require("lspconfig").jinja_lsp.setup({
+                on_attach = on_attach,
+                capabilities = capabilities,
+            })
+            require("lspconfig").tailwindcss.setup({
+                on_attach = on_attach,
+                capabilities = capabilities,
+            })
+            require("lspconfig").vimls.setup({
+                on_attach = on_attach,
+                capabilities = capabilities,
+            })
+            require("lspconfig").tsserver.setup({
+                on_attach = on_attach,
+                capabilities = capabilities,
+            })
         end
     },
 }

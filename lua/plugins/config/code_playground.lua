@@ -7,6 +7,9 @@ return {
                 python = {
                     bin = '/bin/python',
                 },
+                dart = {
+                    bin = 'dart'
+                }
             }
         end
     },
