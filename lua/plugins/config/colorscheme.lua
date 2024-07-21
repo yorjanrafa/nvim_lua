@@ -28,10 +28,10 @@ return {
     'yorjanrafa/tokyodark',
     lazy = false,
     priority = 1000,
-    config = function()
-      require("tokyodark").setup(opts) -- calling setup is optional
-      vim.cmd [[colorscheme tokyodark]]
-    end
+    -- config = function()
+    --   require("tokyodark").setup(opts) -- calling setup is optional
+    --   vim.cmd [[colorscheme tokyodark]]
+    -- end
   },
   {
     'themercorp/themer.lua',
@@ -130,6 +130,15 @@ return {
     end
 
   },
+  {
+    'yorjanrafa/material.nvim',
+    lazy = false,
+    config = function()
+      require("material").setup(opts) -- calling setup is optional
+      vim.cmd [[colorscheme material-darker]]
+    end
+  },
+
 
 
 }
