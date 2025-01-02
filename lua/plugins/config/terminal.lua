@@ -8,8 +8,8 @@ return {
             vim.g.floaterm_keymap_next = '<F9>'
             vim.g.floaterm_keymap_toggle = '<F12>'
 
-            vim.g.floaterm_width = 0.99
-            vim.g.floaterm_height = 0.99  
+            vim.g.floaterm_width = 0.9
+            vim.g.floaterm_height = 0.9  
             vim.api.nvim_command("highlight FloatermBorder guibg=bg guifg=gray")
             vim.g.floaterm_borderchars = "─│─│╭╮╯╰"
         end

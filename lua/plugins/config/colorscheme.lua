@@ -133,12 +133,25 @@ return {
   {
     'yorjanrafa/material.nvim',
     lazy = false,
-    config = function()
-      require("material").setup(opts) -- calling setup is optional
-      vim.cmd [[colorscheme material-darker]]
-    end
+    -- config = function()
+    --   require("material").setup(opts) -- calling setup is optional
+    --   vim.cmd [[colorscheme material-darker]]
+    -- end
   },
 
-
+{
+  'projekt0n/github-nvim-theme',
+  lazy = false,
+  
+},
+{ 
+"catppuccin/nvim", 
+name = "catppuccin", 
+lazy = false,
+config = function()
+  require("catppuccin").setup()
+  vim.cmd [[colorscheme catppuccin-mocha]]
+end
+}
 
 }
